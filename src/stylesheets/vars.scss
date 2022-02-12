@@ -1,0 +1,20 @@
+$font_family_default: Helvetica;
+
+$font_size-large: 5rem; // 80px
+$font_size-medium: 1.25rem; //20px
+$font_size-base: 1rem; //16px
+
+// Media query
+@mixin media($size) {
+  @if $size == 'x-small' {
+    @media only screen and (max-width: 500px) { @content; }
+  } @else if $size == 'small' {
+    @media only screen and (max-width: 650px) { @content; }
+  } @else if $size == 'medium' {
+    @media only screen and (max-width: 800px) { @content; }
+  } @else if $size == 'large' {
+    @media only screen and (px) { @content; }
+  } @else {
+    @media only screen and (max-width: $size) { @content; }
+  }
+}

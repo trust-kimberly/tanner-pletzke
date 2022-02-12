@@ -4,4 +4,5 @@ module.exports = {
     title: "Tanner Pletzke",
   },
   plugins: ["gatsby-plugin-sass"],
+  pathPrefix: "/tanner-pletzke",
 };
