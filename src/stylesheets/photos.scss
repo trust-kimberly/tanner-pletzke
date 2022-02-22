@@ -1,9 +1,14 @@
+@import 'vars';
+
 .photos {
   &-landing-container {
     height: 100vh;
-    // margin-bottom: 5rem;
     overflow: hidden;
     width: 100vw;
+  }
+  &-project-list {
+    margin: 2rem $margins-left-right 0;
+    position: absolute;
   }
   &-project-container {
     height: 100vh;

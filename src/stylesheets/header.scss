@@ -1,0 +1,35 @@
+@import 'vars';
+
+.header {
+  &-container {
+    display: flex;
+    font-family: $font_family_default;
+    font-size: $font_size-base;
+    font-weight: 200;
+    height: auto;
+    margin: $margins-top-bottom 0;
+    h2 {
+      font-size: $font_size-base;
+      font-weight: 400;
+      padding-bottom: 1rem;
+    }
+    h3 {
+      font-size: $font_size-base;
+      font-weight: 400;
+    }
+  }
+  &-column {
+    &-1 {
+      padding: 0 2%;
+      width: 50%;
+    }
+    &-2 {
+      padding: 0 2%;
+      width: 25%;
+    }
+    &-3 {
+      padding: 0 2%;
+      width: 25%;
+    }
+  }
+}

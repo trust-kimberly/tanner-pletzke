@@ -1,7 +1,9 @@
 import React, { useEffect, useState, useRef } from "react";
 // import { graphql, Link } from "gatsby";
+import Header from "../components/modules/header";
 import Draggable from 'react-draggable'; 
 import "../stylesheets/photos.scss";
+import ProjectTitles from '../components/projectTitles'
 import Carousel from "../components/carousel";
 // folder 00004979
 import img000049790001 from "../images/00004979/000049790001.jpg";
@@ -506,6 +508,9 @@ const PhotosLanding = () => {
     </Draggable>
   });
 
+  const projectTitles = photosData.map(item => item.project).filter((value, index, self) => self.indexOf(value) === index);
+  console.log(projectTitles);
+
   const projectPhotos = photosData.filter((photo) => {
     if (photo["project"] === selectedProject) {
       return photo;
@@ -515,7 +520,10 @@ const PhotosLanding = () => {
   return (
     <div>
       <div className="photos-landing-container">
-        <h1>Photos Landing</h1>
+        <Header />
+        <div className="photos-project-list">
+          <ProjectTitles projectTitles={projectTitles} setProject={setProject} />
+        </div>
         {allPhotos}
       </div>
       <div className="photos-project-container">

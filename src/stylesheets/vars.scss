@@ -1,9 +1,12 @@
 $font_family_default: Helvetica;
 
 $font_size-large: 5rem; // 80px
-$font_size-medium: 1.25rem; //20px
-$font_size-base: 1rem; //16px
+$font-size-medium: 3.75rem; // 60px
+$font_size-small: 1.25rem; //20px
+$font_size-base: 0.8rem; 
 
+$margins-top-bottom: 2rem;
+$margins-left-right: 2rem;
 // Media query
 @mixin media($size) {
   @if $size == 'x-small' {
