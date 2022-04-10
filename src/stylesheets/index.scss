@@ -1,7 +1,24 @@
-* { 
-  box-sizing:border-box;
-  margin: 0; 
-  padding:0;  
+@import "carousel";
+@import "header";
+@import "landing";
+@import "photos";
+@import "projectTitles";
+@import "vars";
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  margin: 0;
+  padding: 0px;
+  text-decoration: none;
 }
 
 .index-container {

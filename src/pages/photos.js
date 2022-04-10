@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
-// import { graphql, Link } from "gatsby";
+import { Link } from "gatsby";
 import Header from "../components/modules/header";
 import Draggable from 'react-draggable'; 
-import "../stylesheets/photos.scss";
+import "../stylesheets/index.scss";
 import ProjectTitles from '../components/projectTitles'
-import Carousel from "../components/carousel";
+import CarouselWrapper from "../components/carouselWrapper";
 // folder 00004979
 import img000049790001 from "../images/00004979/000049790001.jpg";
 import img000049790002 from "../images/00004979/000049790002.jpg";
@@ -87,182 +87,182 @@ const PhotosLanding = () => {
     {
       src: img000049790001,
       title: "Image title",
-      project: "Series1"
+      project: "Folder 00004979"
     },
     {
       src: img000049790002,
       title: "Image title",
-      project: "Series1"
+      project: "Folder 00004979"
     },
     {
       src: img000049790003,
       title: "Image title",
-      project: "Series1"
+      project: "Folder 00004979"
     },
     {
       src: img000049790004,
       title: "Image title",
-      project: "Series1"
+      project: "Folder 00004979"
     },
     {
       src: img000049790005,
       title: "Image title",
-      project: "Series1"
+      project: "Folder 00004979"
     },
     {
       src: img000049790006,
       title: "Image title",
-      project: "Series1"
+      project: "Folder 00004979"
     },
     {
       src: img000049790007,
       title: "Image title",
-      project: "Series1"
+      project: "Folder 00004979"
     },
     {
       src: img000049790008,
       title: "Image title",
-      project: "Series1"
+      project: "Folder 00004979"
     },
     {
       src: img000049790009,
       title: "Image title",
-      project: "Series1"
+      project: "Folder 00004979"
     },
     {
       src: img000049790010,
       title: "Image title",
-      project: "Series1"
+      project: "Folder 00004979"
     },
     {
       src: img000049790011,
       title: "Image title",
-      project: "Series2"
+      project: "Folder 00005491"
     },
     {
       src: img000049790012,
       title: "Image title",
-      project: "Series2"
+      project: "Folder 00005491"
     },
     {
       src: img000049790013,
       title: "Image title",
-      project: "Series2"
+      project: "Folder 00005491"
     },
     {
       src: img000049790014,
       title: "Image title",
-      project: "Series2"
+      project: "Folder 00005491"
     },
     {
       src: img000049790015,
       title: "Image title",
-      project: "Series2"
+      project: "Folder 00005491"
     },
     {
       src: img000049790016,
       title: "Image title",
-      project: "Series2"
+      project: "Folder 00005491"
     },
     {
       src: img000049790017,
       title: "Image title",
-      project: "Series2"
+      project: "Folder 00005491"
     },
     {
       src: img000049790018,
       title: "Image title",
-      project: "Series2"
+      project: "Folder 00005491"
     },
     {
       src: img000049790019,
       title: "Image title",
-      project: "Series2"
+      project: "Folder 00005491"
     },
     {
       src: img000049790020,
       title: "Image title",
-      project: "Series2"
+      project: "Folder 00005491"
     },
     {
       src: img000049790021,
       title: "Image title",
-      project: "Series2"
+      project: "Folder 00005491"
     },
     {
       src: img000049790022,
       title: "Image title",
-      project: "Series2"
+      project: "Folder 00005491"
     },
     {
       src: img000049790023,
       title: "Image title",
-      project: "Series2"
+      project: "Folder 00005491"
     },
     {
       src: img000049790024,
       title: "Image title",
-      project: "Series2"
+      project: "Folder 00005491"
     },
     {
       src: img000049790025,
       title: "Image title",
-      project: "Series2"
+      project: "Folder 00005491"
     },
     {
       src: img000049790026,
       title: "Image title",
-      project: "Series2"
+      project: "Folder 00005491"
     },
     {
       src: img000049790027,
       title: "Image title",
-      project: "Series2"
+      project: "Folder 00005491"
     },
     {
       src: img000049790028,
       title: "Image title",
-      project: "Series2"
+      project: "Folder 00005491"
     },
     {
       src: img000049790029,
       title: "Image title",
-      project: "Series2"
+      project: "Folder 00005491"
     },
     {
       src: img000049790030,
       title: "Image title",
-      project: "Series2"
+      project: "Folder 00005491"
     },
     {
       src: img000049790031,
       title: "Image title",
-      project: "Series2"
+      project: "Folder 00005491"
     },
     {
       src: img000049790032,
       title: "Image title",
-      project: "Series2"
+      project: "Folder 00005491"
     },
     {
       src: img000049790033,
       title: "Image title",
-      project: "Series2"
+      project: "Folder 00005491"
     },
     {
       src: img000049790034,
       title: "Image title",
-      project: "Series2"
+      project: "Folder 00005491"
     },
     {
       src: img000049790035,
       title: "Image title",
-      project: "Series2"
+      project: "Folder 00005491"
     },
     {
       src: img000049790036,
       title: "Image title",
-      project: "Series2"
+      project: "Folder 00005491"
     },
     // folder 00005491
     {
@@ -437,7 +437,7 @@ const PhotosLanding = () => {
     }
   ]
 
-  const [selectedProject, setProject] = useState("Series1");
+  const [selectedProject, setProject] = useState("Folder 00004979");
 
   useEffect(() => {
 
@@ -526,8 +526,8 @@ const PhotosLanding = () => {
         </div>
         {allPhotos}
       </div>
-      <div className="photos-project-container">
-        <Carousel projectPhotos={projectPhotos} />
+      <div className="photos-project-container" id="carousel">
+        <CarouselWrapper projectPhotos={projectPhotos} />
       </div>
     </div>
   )

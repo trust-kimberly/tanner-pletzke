@@ -1,21 +1,25 @@
 import React, { useEffect, useState, useRef } from "react";
-import "../stylesheets/projectTitles.scss";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const ProjectTitles = ({projectTitles, setProject}) => {
 
   const titlesList = projectTitles.map((title, index) => {
     return <div>
+      <AnchorLink           
+        key={index}
+        to="#carousel"
+        onClick={() => {
+          setProject(title);
+        }}
+      >
         <span 
           className="project-title"
-          key={index}
-          onClick={() => {
-            setProject(title);
-          }}
         >
           {title}
         </span>
-        <br/>
-      </div>
+      </AnchorLink>
+      <br/>
+    </div>
   })
   return (
     <div>

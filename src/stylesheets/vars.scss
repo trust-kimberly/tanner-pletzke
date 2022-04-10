@@ -7,6 +7,7 @@ $font_size-base: 0.8rem;
 
 $margins-top-bottom: 2rem;
 $margins-left-right: 2rem;
+
 // Media query
 @mixin media($size) {
   @if $size == 'x-small' {

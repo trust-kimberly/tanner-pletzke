@@ -1,4 +1,5 @@
 import * as React from "react";
+import "../stylesheets/index.scss";
 
 const FilmsLanding = () => {
 
